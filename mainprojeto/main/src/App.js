@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; // Make sure to create a corresponding CSS file
 
-function App() {
+function Header() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <header className="header">
+          <div className="logo">WhereToGo</div>
+        <nav className="navigation">
+          <a href="/places" className="nav-link">Places</a>
+          <a href="/reviews" className="nav-link">Reviews</a>
+          <a href="/itinerary" className="nav-link">Roteiro</a>
+          <a href="/wheretoeat" className="nav-link">WhereToEat</a>
+        </nav>
+      <button className="login-button">Iniciar Sessão</button>
+    </header>
   );
 }
 
-export default App;
+export default Header;
