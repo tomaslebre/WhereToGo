@@ -1,0 +1,74 @@
+.feature-card {
+    background-color: #FEF1CC;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: space-between; /* Distribui o espaço horizontalmente */
+    max-width: 1100px;
+    height: 350px;
+    margin: 60px auto; /* Aumente a margem superior e inferior conforme necessário */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Permite que o container cresça para usar todo o espaço disponível */
+  }
+  
+  .logo-txt {
+    font-size: 50px;
+    font-weight: bold;
+    color: #001FA8;
+    margin-bottom:0; /* Espaçamento entre o título e o subtítulo */
+  }
+  
+  .slogan-p {
+    color: #001FA8;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 1em;/* Espaçamento entre o subtítulo e o botão */
+  }
+ 
+  .new-roteiro {
+    padding: 12px 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #010a33 00%, #001FA8 100%); /* Gradiente da esquerda para a direita */
+    position: relative; /* Posição relativa para elementos internos posicionados absolutamente */
+    overflow: hidden; /* Previne que elementos internos 'vazem' para fora */
+    transition: color 0.6s; /* Transição suave da cor do texto */
+  }
+  
+  /* Cria o pseudo-elemento para o efeito de hover */
+  .new-roteiro::before {
+    content: '';
+    position: absolute; /* Posicionamento absoluto dentro do botão */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to left, #010a33 0%, #001FA8 100%); /* Gradiente da direita para a esquerda */
+    opacity: 0; /* Inicialmente transparente */
+    transition: opacity 0.6s ease; /* Transição suave da opacidade */
+    z-index: 0; /* Abaixo do texto */
+  }
+  
+  .new-roteiro:hover::before {
+    opacity: 1; /* O pseudo-elemento se torna visível, mostrando o gradiente alternativo */
+  }
+  
+  
+  
+  .feature-image {
+    width: 50%; /* Ajuste a largura da imagem para metade do cartão */
+    height: auto; /* Altura auto para manter a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+  }
+  
