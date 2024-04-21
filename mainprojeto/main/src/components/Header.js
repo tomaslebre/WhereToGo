@@ -1,27 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 import logoImage from '../imgs/logos/logoponte.png';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
 
 function Header() {
-  return (
-  
-      <header className="header">
-        <div className="branding">
-        <a href='/'><img src={logoImage} className='logoImg' alt="Logo"/></a> 
-        <a href='/'><div className="logo">WhereToGo</div> </a>
-        </div>
-        
-        <nav className="navigation">
-          <a href="/places" className="nav-link">Locais</a>
-          <a href="/reviews" className="nav-link">Avaliações</a>
-          <a href="/roteiro" className="nav-link">Roteiro</a>
-          <a href="/wheretoeat" className="nav-link">WhereToEat</a>
-        </nav>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-        <button className="login-button">Iniciar Sessão</button>
-      </header>
+  const toggleMenu = () => {
+    setIsMenuOpen(isMenuOpen => !isMenuOpen);
+  };
+
+  const navMotions = {
+    hover: {
+      scale: 1.1,
+      transition: {
+        type: 'spring',
+        stiffness: 300,
+        damping: 10
+      }
+    }
+  };
+
+  return (
+    <header className="header">
+      <div className="branding">
+        <Link to='/'><img src={logoImage} className='logoImg' alt="Logo"/></Link>
+        <Link to='/'><div className="logo">WhereToGo</div></Link>
+      </div>
+      <div className="hamburger-menu" onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav className={`navigation ${isMenuOpen ? 'active' : ''}`}>
+        <Link to="/places" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+          <motion.div className="nav-content" variants={navMotions} whileHover="hover">Locais</motion.div>
+        </Link>
+        <Link to="/reviews" className="nav-link">
+          <motion.div className="nav-content" variants={navMotions} whileHover="hover">Avaliações</motion.div>
+        </Link>
+        <Link to="/roteiro" className="nav-link">
+          <motion.div className="nav-content" variants={navMotions} whileHover="hover">Roteiro</motion.div>
+        </Link>
+        <Link to="/wheretoeat" className="nav-link">
+          <motion.div className="nav-content" variants={navMotions} whileHover="hover">WhereToEat</motion.div>
+        </Link>
+        <div className="login-button-container">
+          <motion.button className="login-button" onClick={() => setIsMenuOpen(false)}>
+            Iniciar Sessão
+          </motion.button>
+        </div>
+      </nav>
+    </header>
   );
-  
 }
 
 export default Header;
+
+
