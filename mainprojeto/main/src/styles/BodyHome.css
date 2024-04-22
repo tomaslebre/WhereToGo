@@ -3,14 +3,13 @@
     border-radius: 20px;
     padding: 20px;
     display: flex;
-    align-items: center; /* Centraliza o conteúdo verticalmente */
-    justify-content: space-between; /* Distribui o espaço horizontalmente */
+    align-items: center; 
+    justify-content: space-between; 
     max-width: 1100px;
-    height: 370px;
-    margin: 60px auto; /* Aumente a margem superior e inferior conforme necessário */
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra suave */
+    margin: 60px auto; 
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); 
   }
-  
+
   .text-container {
     display: flex;
     flex-direction: column;
@@ -70,24 +69,79 @@
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
   }
 
-  /* Telémovel */
-    @media (max-width: 768px) {
-        .feature-card {
-        flex-direction: column;
-        width:70%; /* Altera a direção da flexbox para empilhar verticalmente */
-        height: auto; /* Altura automática para acomodar o conteúdo */
-        }
-    
-        .feature-image {
-        width: 70%; /* Ajusta a largura da imagem para ocupar toda a largura do cartão */
-        }
-    
-        .text-container {
-        padding: 20px; /* Adiciona um preenchimento interno ao container de texto */
-        text-align: center; /* Centraliza o texto */
-        }
-    
-        .logo-txt {
-        font-size: 40px; /* Reduz o tamanho da fonte do título */
-        }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navigation, .branding {
+        padding: 15px;
     }
+
+    .text-container {
+      order: -1; /* Coloca o texto acima da imagem */
+      width: 100%; /* Faz o contêiner de texto ocupar toda a largura */
+      max-width: none; /* Remove qualquer restrição de max-width que possa existir */
+      padding: 0 20px; /* Preenchimento horizontal para manter o texto não colado às bordas */
+  }
+
+  .logo-txt {
+      font-size: 40px; /* Tamanho da fonte ajustado para a visualização em telémovel */
+      margin-bottom: 10px; /* Espaço abaixo do título */
+  }
+
+  .slogan-p {
+      font-size: 18px; /* Tamanho da fonte ajustado para a visualização em telémovel */
+      margin-bottom: 20px; /* Espaço abaixo do slogan */
+  }
+
+    .logo, .nav-link, .login-button {
+        font-size: smaller;
+    }
+}
+ 
+@media (max-width: 768px) {
+  .navigation, .branding {
+      padding: 15px;
+  }
+
+  .text-container {
+    margin-top: 20px;
+    margin-right: 10px;
+    order: -1; /* Coloca o texto acima da imagem */
+    width: 100%; /* Faz o contêiner de texto ocupar toda a largura */
+    max-width: none; /* Remove qualquer restrição de max-width que possa existir */
+    padding: 0 20px; /* Preenchimento horizontal para manter o texto não colado às bordas */
+  }
+
+  .feature-image{
+    object-fit: cover;
+  }
+
+  .feature-card {
+    width: 80%; /* Mantém a largura ajustada */
+    padding: 20px; /* Mantém o padding original */
+    max-height: 250px; /* Ajusta a altura máxima para limitar o tamanho do cartão */
+    overflow: auto; /* Permite rolagem se o conteúdo exceder a altura máxima */
+  }
+  .new-roteiro {
+    padding: 8px 20px;
+    margin-left: 0;
+    font-size: 12px; /* Ajusta o tamanho da fonte do botão */
+  }
+
+  .logo-txt {
+    font-size: 26px; /* Ajusta o tamanho da fonte do título */
+    margin-bottom: 130px; 
+    position: absolute;
+
+    text-align: center;
+  }
+
+  .slogan-p {
+    text-align: center;
+    font-size: 14px; /* Ajusta o tamanho da fonte do slogan */
+    margin-bottom: 9%; /* Reduz a margem inferior do slogan */
+  }
+
+  .logo {
+      font-size: 20px;
+  }
+}

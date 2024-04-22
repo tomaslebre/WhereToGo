@@ -44,10 +44,10 @@ function BodyHome() {
         </button>
       </motion.div>
       <motion.img src={bridgeImage} alt="Ponte" className="feature-image" variants={imageVariants} initial="hidden" animate="visible" />
-    </motion.div>
+      </motion.div>
 
-    <motion.div className="about-us-container"  initial="hidden" animate="visible"> 
-        Sobre nós 
+      <motion.div className="about-us-container"  initial="hidden" animate="visible"> 
+          {/* Sobre nós  */}
     </motion.div>
     </>
   );
