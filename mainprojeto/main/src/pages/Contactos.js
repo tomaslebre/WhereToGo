@@ -1,5 +1,5 @@
 import React from 'react'
-import "../styles/Contactos.css";
+import '../App.css';
 import BodyContactos from '../components/BodyContactos';
 function Contactos() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import "../styles/Contactos.css";
+import '../App.css';
 import bridgeImage from '../imgs/imagens/ponte_azul.png';
 
 function BodyContactos() {
