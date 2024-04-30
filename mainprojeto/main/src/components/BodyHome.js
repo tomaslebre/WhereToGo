@@ -46,9 +46,12 @@ function BodyHome() {
       <motion.img src={bridgeImage} alt="Ponte" className="feature-image" variants={imageVariants} initial="hidden" animate="visible" />
       </motion.div>
 
-      <motion.div className="about-us-container"  initial="hidden" animate="visible"> 
-          {/* Sobre nós  */}
-    </motion.div>
+      <div className="about-us-container"  initial="hidden" animate="visible"> 
+          <h2 className='about-us-title'>Sobre Nós</h2>
+          <p className='about-us-text'>Somos um grupo de amigos que adora viajar e explorar novos lugares. 
+          Com o Where To Go? podes criar o teu roteiro de viagem personalizado em minutos. 
+          Basta escolheres os locais que queres visitar e nós tratamos do resto.</p>
+        </div>
     </>
   );
 }

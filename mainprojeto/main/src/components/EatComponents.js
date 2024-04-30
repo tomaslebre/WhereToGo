@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import bridgeImage from '../imgs/imagens/ponte_azul.png';
+import '../App.css';
 
 
 function EatComponents() {
@@ -34,6 +35,7 @@ function EatComponents() {
     
       return (
         <>
+        
         <motion.div className="feature-card" variants={cardVariants} initial="hidden" animate="visible">
           <motion.div className="text-container" variants={textContainerVariants} initial="hidden" animate="visible">
             

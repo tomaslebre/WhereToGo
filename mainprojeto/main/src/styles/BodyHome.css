@@ -1,3 +1,11 @@
+
+body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}*
+
 .feature-card {
     background-color: #FEF1CC;
     border-radius: 20px;
@@ -126,19 +134,19 @@
     padding: 10px;
   }
   .logo-txt {
+    margin-bottom: 25%;
     font-size: 20px;
-    margin-bottom: 0;
   }
   .slogan-p {
-    font-size: 16px;
-    margin-bottom: 0.5em;
+    font-size: 13px;
+    margin-bottom: 1em;
   }
   .new-roteiro {
     padding: 6px 16px;
     font-size: 10px;
   }
   .feature-image {
-    width: 100%;
+    width: 50%;
   }
 }
 
