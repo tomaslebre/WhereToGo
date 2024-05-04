@@ -3,10 +3,12 @@ import '../App.css';
 import logoImage from '../imgs/logos/logoponte.png';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import LoginModal from './LoginModal';
 
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(isMenuOpen => !isMenuOpen);
@@ -50,10 +52,11 @@ function Header() {
           <motion.div className="nav-content" variants={navMotions} whileHover="hover">WhereToEat</motion.div>
         </Link>
         <div className="login-button-container">
-          <motion.button className="login-button" onClick={() => setIsMenuOpen(false)}>
+          <motion.button className="login-button" onClick={() => setIsLoginModalOpen(true)}>
             Iniciar Sessão
           </motion.button>
         </div>
+        <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
       </nav>
     </header>
   );

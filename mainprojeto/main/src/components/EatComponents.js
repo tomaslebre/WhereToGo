@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import bridgeImage from '../imgs/imagens/ponte_azul.png';
 import '../App.css';
+import CardsComponents from './CardsComponents';
 
 
 function EatComponents() {
@@ -40,17 +41,129 @@ function EatComponents() {
           <motion.div className="text-container" variants={textContainerVariants} initial="hidden" animate="visible">
             
             <p className="sloganeat-p">Para cada fome, um destino delicioso</p>
-            <button className="new-roteiro">
-              <span style={{ position: 'relative', zIndex: 1 }}>Novo Roteiro</span>
-            </button>
+
           </motion.div>
-          <motion.img src={bridgeImage} alt="Ponte" className="feature-image" variants={imageVariants} initial="hidden" animate="visible" />
           </motion.div>
     
           <motion.div className="about-us-container"  initial="hidden" animate="visible"> 
               {/* Sobre nós  */}
         </motion.div>
+        <div className='container'>
+      <span className='tag-container'>Português</span>
+        <div className='containers'>
+
+          <div className='cards-container'>
+            
+          </div>
+          <div className='cards-container'> 
+
+          </div>
+          <div className='cards-container'>
+            
+          </div>
+        </div>
+        </div>
+
+        <div className='container'>
+      <span className='tag-container'>Mexicano</span>
+        <div className='containers'>
+
+          <div className='cards-container'>
+            
+          </div>
+          <div className='cards-container'> 
+
+          </div>
+          <div className='cards-container'>
+            
+          </div>
+        </div>
+        </div>
+
+        <div className='container'>
+      <span className='tag-container'>Asiático</span>
+        <div className='containers'>
+
+          <div className='cards-container'>
+            
+          </div>
+          <div className='cards-container'> 
+
+          </div>
+          <div className='cards-container'>
+            
+          </div>
+        </div>
+        </div>
+
+        <div className='container'>
+      <span className='tag-container'>Japonês</span>
+        <div className='containers'>
+
+          <div className='cards-container'>
+            
+          </div>
+          <div className='cards-container'> 
+
+          </div>
+          <div className='cards-container'>
+            
+          </div>
+        </div>
+        </div>
+
+        <div className='container'>
+      <span className='tag-container'>Indiano</span>
+        <div className='containers'>
+
+          <div className='cards-container'>
+            
+          </div>
+          <div className='cards-container'> 
+
+          </div>
+          <div className='cards-container'>
+            
+          </div>
+        </div>
+        </div>
+
+        <div className='container'>
+      <span className='tag-container'>Italiano</span>
+        <div className='containers'>
+
+          <div className='cards-container'>
+            
+          </div>
+          <div className='cards-container'> 
+
+          </div>
+          <div className='cards-container'>
+            
+          </div>
+        </div>
+        </div>
+
+        <div className='container'>
+      <span className='tag-container'>Marisqueira</span>
+        <div className='containers'>
+
+          <div className='cards-container'>
+            
+          </div>
+          <div className='cards-container'> 
+
+          </div>
+          <div className='cards-container'>
+            
+          </div>
+        </div>
+        </div>
+
+        
         </>
+        
+        
       );
 }
 

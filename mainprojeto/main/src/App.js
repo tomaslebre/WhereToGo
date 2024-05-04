@@ -8,8 +8,10 @@ import Eat from './pages/Eat';
 import Reviews from './pages/Reviews';
 import Roteiro from './pages/Roteiro';
 import Contactos from './pages/Contactos';
+import LoginModal from "./components/LoginModal";
 import Cards from './components/CardsComponents';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 
 const Home= () => {
   return(
@@ -33,6 +35,7 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/roteiro" element={<Roteiro />} />
           <Route path="/contactos" element={<Contactos />} />
+          <Route path="/login" element={<LoginModal />} />
         </Routes>
       </div>
       <Footer />
