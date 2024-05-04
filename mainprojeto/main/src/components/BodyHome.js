@@ -42,17 +42,16 @@ function BodyHome() {
         <button className="new-roteiro">
           <span style={{ position: 'relative', zIndex: 1 }}>Novo Roteiro</span>
         </button>
-      </motion.div>
+      </motion.div> 
       <motion.img src={bridgeImage} alt="Ponte" className="feature-image" variants={imageVariants} initial="hidden" animate="visible" />
       </motion.div>
 
-      <div className="about-us-container"  initial="hidden" animate="visible"> 
-          <h2 className='about-us-title'>Sobre Nós</h2>
-          <p className='about-us-text'>Somos um grupo de amigos que adora viajar e explorar novos lugares. 
-          Com o Where To Go? podes criar o teu roteiro de viagem personalizado em minutos. 
-          Basta escolheres os locais que queres visitar e nós tratamos do resto.</p>
-        </div>
+      <div className="recommened-container"  initial="hidden" animate="visible"> 
+          <h2 className='title-recommended'>Os locais mais visitados, pelos os nossos exploradores</h2>
+      </div>
+      
     </>
+    
   );
 }
 

@@ -77,7 +77,23 @@ body{
     object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
   }
 
-
+  .recommened-container{
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px auto; /* Centraliza e adiciona margem externa */
+    max-width: 700px; /* Largura máxima para melhor leitura */
+    display: flex; /* Usa flexbox para layout interno */
+    flex-direction: column; /* Organiza os filhos verticalmente */
+    align-items: center; /* Alinha itens ao centro horizontalmente */
+    justify-content: center; /* Centraliza conteúdo verticalmente */
+  }
+  
+  .title-recommended {
+    color: #001FA8; /* Cor azul para o título */
+    text-align: center;
+    font-size: 40px; /* Tamanho grande para destaque */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    font-weight: bold; /* Fonte em negrito */
+  }
  
 @media (max-width: 768px) {
   .navigation, .branding {

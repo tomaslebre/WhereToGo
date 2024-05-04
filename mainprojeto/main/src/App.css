@@ -110,13 +110,15 @@ a{
 
 footer {
   /* Posiciona o rodapé no fundo da página sem ficar preso */
-  position: absolute;
+  /* flex:1; */
+  /* position: absolute; */
   width: 100%;
   background-color: #F0F0F0;  /* Cor de fundo */
   padding: 10px 0;            /* Espaçamento interno */
-  display: flex;              /* Usa flexbox para layout */
-  justify-content: center;    /* Centraliza os itens horizontalmente */
-  align-items: center;        /* Alinha os itens verticalmente ao centro */
+  display: flex;          
+  justify-content: center;   
+  align-items: center;      
+  margin-top: 2%;  
 }
 
 
@@ -131,31 +133,9 @@ footer {
   text-decoration: underline; /* Manter sublinhado para links */
 }
 
-/* sobre nós */
+/* Cards Containers */
 
-.about-us-container {
-  padding: 20px; /* Espaçamento interno */
-  margin: 20px auto; /* Centraliza e adiciona margem externa */
-  max-width: 700px; /* Largura máxima para melhor leitura */
-  display: flex; /* Usa flexbox para layout interno */
-  flex-direction: column; /* Organiza os filhos verticalmente */
-  align-items: center; /* Alinha itens ao centro horizontalmente */
-  justify-content: center; /* Centraliza conteúdo verticalmente */
-}
-
-.about-us-title {
-  color: #001FA8; /* Cor azul para o título */
-  font-size: 24px; /* Tamanho grande para destaque */
-  margin-bottom: 10px; /* Espaço abaixo do título */
-  font-weight: bold; /* Fonte em negrito */
-}
-
-.about-us-text {
-  color: #333; /* Cor escura para texto para facilitar leitura */
-  font-size: 16px; /* Tamanho adequado para texto */
-  text-align: center; /* Alinha o texto ao centro */
-  line-height: 1.6; /* Espaçamento de linha para melhor legibilidade */
-}
+/* Fim Cards Containers */
 
 /* contactos */
 
@@ -205,6 +185,25 @@ footer {
     font-weight: bold;
     margin-bottom: 1em;/* Espaçamento entre o subtítulo e o botão */
 }
+
+.cards-container {
+  width: 360px;
+  height: 360px;
+  background-color: #FFFFFF; /* Cor de preenchimento branca */
+  border: 3px solid #FEF1CC; /* Cor da borda FEF1CC */
+  border-radius: 15px; /* Raio da borda */
+  display: flex;
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  
+}
+
+.containers{
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 3%; /* Add 2px of space between the cards */
+}
+
 
 
 
@@ -283,8 +282,6 @@ footer {
 
     footer {
       /* Posiciona o rodapé no fundo da página sem ficar preso */
-      position: absolute;
-      bottom: 0%;
       width: 100%;
       background-color: #F0F0F0;  /* Cor de fundo */
       padding: 10px 0;            /* Espaçamento interno */
