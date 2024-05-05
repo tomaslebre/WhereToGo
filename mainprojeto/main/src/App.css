@@ -198,22 +198,56 @@ footer {
   
 }
 
-.containers{
+.containers {
   display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  gap: 3%; /* Add 2px of space between the cards */
+  flex-wrap: wrap; /* Permite que os itens se ajustem em múltiplas linhas */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 20px; /* Espaçamento entre os itens */
+  margin-bottom: 20px; /* Espaçamento na parte inferior */
 }
 
 .tag-container {
   display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Aligns content vertically */
+  width: 12%; /* Ensures it takes full width of its container */
+  padding: 7px 20px;
+  background-color: #FEF1CC;
+  border-radius: 15px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   font-weight: bold;
-  gap: 10px;
-  margin-top: 10px;
-  padding-left: 10%;
-  padding-bottom: 1%;
-  color:#001FA8;
-  
+  color: #001FA8;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto 10px; /* Centers it and adds space below */
 }
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  gap: 7px;
+  margin-left: 64%;
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+  padding: 8px;
+  border: 2px solid #001FA8;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-bar button {
+  cursor: pointer;
+  background-color: #001FA8;
+  color: #ffffff;
+}
+
+.search-bar input:focus, .search-bar select:focus, .search-bar button:focus {
+  border-color: #FEF1CC;
+}
+
 
 
 
@@ -247,10 +281,11 @@ footer {
   background: #FEF1CC;
   color: #001FA8;
   padding: 20px;
-  border-radius: 8px;
-  width: 400px;
+  border-radius: 15px;
+  width: 450px;
   height: 400px;
   text-align: left;
+  padding: 40px;
   position: relative; /* For positioning the close button */
 }
 
@@ -269,6 +304,12 @@ footer {
   cursor: pointer;
   font-size: 16px;
   position: relative; /* Sets the positioning context for absolute positioning inside */
+}
+
+.terms-modal{
+  text-align: center;
+  margin-top: 20%;
+
 }
 
 .email-logo {
@@ -323,6 +364,9 @@ p {
 /* Responsive Telemovel */
 @media (max-width: 768px) {
 
+  .tag-container {
+    margin-left: 200%;
+  }
   
     .header { 
       flex-direction: column; 
@@ -539,5 +583,19 @@ p {
       /* meter o botão no lado direito */
       padding-left: 80px;
     } 
+
+    .tag-container {
+      margin-left: 200%;
+    }
+
   }
 
+  /* Responsive Desktop from 1139px */
+
+  @media (min-width: 1139px) and (max-width: 1368px) {
+
+    .tag-container {
+      margin-left: 200%;
+    }
+
+  }

@@ -9,7 +9,9 @@ import Reviews from './pages/Reviews';
 import Roteiro from './pages/Roteiro';
 import Contactos from './pages/Contactos';
 import LoginModal from "./components/LoginModal";
-import Cards from './components/CardsComponents';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
@@ -17,7 +19,6 @@ const Home= () => {
   return(
     <div>
       <BodyHome />
-      <Cards />
     </div>
   );
 }
