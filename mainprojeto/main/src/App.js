@@ -10,8 +10,6 @@ import Roteiro from './pages/Roteiro';
 import Contactos from './pages/Contactos';
 import LoginModal from "./components/LoginModal";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 
@@ -22,6 +20,8 @@ const Home= () => {
     </div>
   );
 }
+
+
 
 function App() {
   return (

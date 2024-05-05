@@ -45,6 +45,10 @@ html,body{
   font-weight: bold;
   display: inline-block; /* Assegura que o motion.div se comporte como um inline-block */
 }
+.header a {
+  text-decoration: none; /* Remove sublinhado de todos os links no header */
+}
+
 
 
 .logo {
@@ -182,8 +186,10 @@ footer {
 .sloganeat-p{
   color: #001FA8;
     font-size: 40px;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    margin-bottom: 1em;/* Espaçamento entre o subtítulo e o botão */
+    padding-top: 15px;
+    
 }
 
 .cards-container {
@@ -200,17 +206,26 @@ footer {
 
 .containers {
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens se ajustem em múltiplas linhas */
-  justify-content: center; /* Centraliza os itens horizontalmente */
-  gap: 20px; /* Espaçamento entre os itens */
-  margin-bottom: 20px; /* Espaçamento na parte inferior */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px !important; /* Força a aplicação do estilo */
+  margin-bottom: 20px;
 }
+
+.cards-row {
+  margin: 0 -15px; /* Reduz o espaçamento padrão do Bootstrap */
+}
+
+.cards-container {
+  padding: 0 15px; /* Ajusta o espaçamento para cada card */
+}
+
 
 .tag-container {
   display: flex;
   justify-content: center; /* Centers content horizontally */
   align-items: center; /* Aligns content vertically */
-  width: 12%; /* Ensures it takes full width of its container */
+  width: 100%;
   padding: 7px 20px;
   background-color: #FEF1CC;
   border-radius: 15px;
@@ -234,7 +249,7 @@ footer {
 .search-bar input, .search-bar select, .search-bar button {
   padding: 8px;
   border: 2px solid #001FA8;
-  border-radius: 5px;
+  border-radius: 15px;
   outline: none;
 }
 
@@ -252,18 +267,78 @@ footer {
 
 
 
-
-
-
-
-
-
-
-
-
 /* Fim css página eat */
 
-/* Login página */
+/* Inicio css página local */
+
+
+.sloganloc-p{
+  color: #001FA8;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-top: 15px;
+  float: left;
+}
+
+.sloganloc2-p{
+  color: #001FA8;
+  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding-top: 15px;
+  float: right;
+}
+
+.cards-container {
+  width: 360px;
+  height: 360px;
+  background-color: #FFFFFF; /* Cor de preenchimento branca */
+  border: 3px solid #FEF1CC; /* Cor da borda FEF1CC */
+  border-radius: 15px; /* Raio da borda */
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.local-card {
+  display: flex;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-color:#EADDCA;
+}
+
+.local2-card{
+  display: flex;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+  background-color:#FEF1CC;
+  
+}
+
+.text-container1 {
+  display: flex;
+  justify-content: left;
+  margin-right: 20px;
+}
+
+.text-container2 {
+  display: flex;
+  justify-content: right;
+  margin-left: 20px;
+}
+
+
+
+
+
+/* Fim css página local */
+
+/* LoginModal página */
 .login-modal-backdrop {
   position: fixed;
   top: 0;
@@ -282,11 +357,15 @@ footer {
   color: #001FA8;
   padding: 20px;
   border-radius: 15px;
-  width: 450px;
-  height: 400px;
+  width: 460px;
+  height: 450px;
   text-align: left;
-  padding: 40px;
+  padding: 25px;
   position: relative; /* For positioning the close button */
+}
+
+.login-modal-header {
+  margin-bottom: 30px;
 }
 
 .login-modal-button {
@@ -308,7 +387,7 @@ footer {
 
 .terms-modal{
   text-align: center;
-  margin-top: 20%;
+  margin-top: 23%;
 
 }
 
@@ -330,8 +409,6 @@ footer {
   width: auto; /* Maintain aspect ratio */
 }
 
-
-
 .login-modal-button span {
   flex-grow: 1; /* Allows the text to take up remaining space for centering */
   text-align: center; /* Centers the text */
@@ -352,22 +429,92 @@ p {
   color: #666;
 }
 
+/* Fim LoginModal página */
+
+/*Login inicio*/
+.login-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* Make sure this is above other page content */
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px; /* Adjust width as needed */
+  padding: 20px;
+  text-align: center;
+  background-color: #F0F0F0; /* Light background color */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative; /* Allows for close button positioning if needed */
+  z-index: 1051; /* Above the backdrop */
+}
+
+
+.login-logo {
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-links a {
+  display: block;
+  color: #0066cc;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.login-form button {
+  padding: 10px;
+  color: white;
+  background-color: #001FA8; /* Example blue */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #003399;
+}
+
+.login-container p {
+  font-size: 12px;
+  color: #666;
+  margin-top: 20px;
+}
 
 
 
 
-
-
-/* Fim Login página */
+/*Login Fim*/
 
 
 /* Responsive Telemovel */
 @media (max-width: 768px) {
 
-  .tag-container {
-    margin-left: 200%;
-  }
-  
+ 
     .header { 
       flex-direction: column; 
       align-items: flex-start; 
@@ -584,9 +731,6 @@ p {
       padding-left: 80px;
     } 
 
-    .tag-container {
-      margin-left: 200%;
-    }
 
   }
 
@@ -594,8 +738,5 @@ p {
 
   @media (min-width: 1139px) and (max-width: 1368px) {
 
-    .tag-container {
-      margin-left: 200%;
-    }
 
   }

@@ -49,9 +49,9 @@ function BodyHome() {
         <motion.img src={bridgeImage} alt="Ponte" ref={imageRef} className="feature-image" variants={imageVariants} initial="hidden" animate={imageInView ? "visible" : "hidden"} />
       </motion.div>
 
-      <div className="recommened-container">
+      <motion.div className="recommened-container" ref={textRef} variants={textContainerVariants} initial="hidden" animate={textInView ? "visible" : "hidden"}>
           <h2 className='title-recommended'>Os locais mais visitados, pelos os nossos exploradores</h2>
-      </div>
+      </motion.div>
       <Cards>Recomendados</Cards>
       <Cards></Cards>
     </>
