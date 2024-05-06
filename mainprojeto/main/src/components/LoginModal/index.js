@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../App.css';
+import './LoginModal.css';
 import emailLogo from '../../imgs/logos/mail.png';
 import googleLogo from '../../imgs/logos/google.png';
 import ponteLogo from '../../imgs/logos/logoponte.png';

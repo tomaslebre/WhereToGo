@@ -1,5 +1,6 @@
 import React from 'react';
-import '../../App.css';// Ensure CSS is imported
+import './Login.css';// Ensure CSS is imported
+import closeIcon from '../../imgs/logos/close.png';
 
 function Login({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -26,7 +27,9 @@ function Login({ isOpen, onClose }) {
 
           <button type="submit">Iniciar Sessão</button>
         </form>
-        <button onClick={onClose} style={{ marginTop: '10px' }}>Fechar</button>
+        <button onClick={onClose} className="login-close-button">
+                <img src={closeIcon} alt="Close" />
+               </button>
         <p>By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie Statement</p>
         <p>This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.</p>
       </div>

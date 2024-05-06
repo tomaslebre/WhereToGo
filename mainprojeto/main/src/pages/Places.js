@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
 import CardsComponents from '../components/CardsComponents';
+import CustomCard from '../components/CustomCard';
 import { motion } from 'framer-motion';
 
 
@@ -82,24 +83,8 @@ function Places() {
       <CardsComponents>Monumentos</CardsComponents>
       <CardsComponents>Praias</CardsComponents>
 
-      <motion.div className="local-card" variants={cardVariants} initial="hidden" animate="visible">
-      <motion.div className="text-container2" variants={textContainerVariants} initial="hidden" animate="visible">
-      <motion.div className="local2-card" variants={cardVariants} initial="hidden" animate="visible">
-        <motion.div className="text-container1" variants={textContainerVariants} initial="hidden" animate="visible">
-        
-            <p class="sloganloc-p">Está com dúvidas de onde ir?</p>
-            
-        
+      <CustomCard />
       
-        </motion.div>
-        </motion.div>
-        <p class="sloganloc-p">Usa a nossa função de criar roteiro</p>
-        <button className="new-roteiro">
-            <span style={{ position: 'relative', zIndex: 1 }}>Novo Roteiro</span>
-          </button>        
-        
-      </motion.div>
-      </motion.div>
       
     </>
   );
