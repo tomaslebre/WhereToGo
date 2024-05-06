@@ -3,7 +3,7 @@ import '../App.css';
 import logoImage from '../imgs/logos/logoponte.png';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import LoginModal from './LoginModal';
+import LoginModal from '../LoginModal';
 
 
 function Header() {

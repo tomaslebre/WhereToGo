@@ -4,7 +4,7 @@ import emailLogo from '../imgs/logos/mail.png';
 import googleLogo from '../imgs/logos/google.png';
 import ponteLogo from '../imgs/logos/logoponte.png';
 import closeIcon from '../imgs/logos/close.png';
-import Login from './Login';  // Make sure Login is imported
+import Login from '../Login';  // Make sure Login is imported
 
 function LoginModal({ isOpen, onClose }) {
   const [isLoginOpen, setIsLoginOpen] = useState(false);  // State to control the Login modal

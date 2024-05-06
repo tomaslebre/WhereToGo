@@ -192,17 +192,6 @@ footer {
     
 }
 
-.cards-container {
-  width: 360px;
-  height: 360px;
-  background-color: #FFFFFF; /* Cor de preenchimento branca */
-  border: 3px solid #FEF1CC; /* Cor da borda FEF1CC */
-  border-radius: 15px; /* Raio da borda */
-  display: flex;
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  
-}
 
 .containers {
   display: flex;
@@ -216,9 +205,6 @@ footer {
   margin: 0 -15px; /* Reduz o espaçamento padrão do Bootstrap */
 }
 
-.cards-container {
-  padding: 0 15px; /* Ajusta o espaçamento para cada card */
-}
 
 
 .tag-container {
@@ -290,15 +276,15 @@ footer {
   float: right;
 }
 
-.cards-container {
-  width: 360px;
-  height: 360px;
+.cards-container{
+  width: 100%;
+  aspect-ratio: 1/1;
   background-color: #FFFFFF; /* Cor de preenchimento branca */
   border: 3px solid #FEF1CC; /* Cor da borda FEF1CC */
   border-radius: 15px; /* Raio da borda */
   display: flex;
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centrahiliza o conteúdo verticalmente */
 }
 
 .local-card {
