@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';// Ensure CSS is imported
+import '../../App.css';// Ensure CSS is imported
 
 function Login({ isOpen, onClose }) {
   if (!isOpen) return null;

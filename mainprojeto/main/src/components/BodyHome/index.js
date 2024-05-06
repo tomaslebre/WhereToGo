@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import "../styles/BodyHome.css";
-import bridgeImage from '../imgs/imagens/ponte_azul.png';
+import "../../styles/BodyHome.css";
+import bridgeImage from '../../imgs/imagens/ponte_azul.png';
 import Cards from '../CardsComponents';
 import useInView from '../../hooks/useInView';  // Ajuste este caminho conforme necessário
 

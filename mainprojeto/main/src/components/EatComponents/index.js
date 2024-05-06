@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import bridgeImage from '../imgs/imagens/ponte_azul.png';
-import '../App.css';
+import bridgeImage from '../../imgs/imagens/ponte_azul.png';
+import '../../App.css';
 import CardsComponents from '../CardsComponents';
 
 
