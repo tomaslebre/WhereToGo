@@ -29,30 +29,30 @@ function CardsComponents({ children }) {
   };
 
   return (
-    <motion.div className='container mt-4 ' ref={ref} variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"} exit={inView ? "exit" : undefined}>
+    <motion.div className='container mt-4' ref={ref} variants={containerVariants} initial="hidden" animate={inView ? "visible" : "hidden"} exit={inView ? "exit" : undefined}>
       {children && (
         <div className="row justify-content-left">
-          <div className="col-md-2">
+          <div className="col-12 col-md-2">
             <motion.p className="tag-container text-center mx-auto" style={{ maxWidth: "300px" }} variants={cardVariants}>
               {children}
             </motion.p>
           </div>
         </div>
       )}
-      <div className="row justify-content-center" >
-        <div className="col-md-4">
+      <div className="row justify-content-center">
+        <div className="col-6 col-sm-6 col-md-4">
           <motion.div className='cards-container' variants={cardVariants}>
             {/* Content of the first card */}
           </motion.div>
         </div>
-        <div className="col-md-4">
+        <div className="col-6 col-sm-6 col-md-4">
           <motion.div className='cards-container' variants={cardVariants}>
             {/* Content of the second card */}
           </motion.div>
         </div>
-        <div className="col-md-4">
+        <div className="d-none d-md-block col-md-4">
           <motion.div className='cards-container' variants={cardVariants}>
-            {/* Content of the third card */}
+            {/* Content of the third card, hidden on xs and sm screens */}
           </motion.div>
         </div>
       </div>

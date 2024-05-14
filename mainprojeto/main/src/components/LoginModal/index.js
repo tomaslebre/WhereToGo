@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './LoginModal.css';
 import emailLogo from '../../imgs/logos/mail.png';
 import googleLogo from '../../imgs/logos/google.png';
@@ -9,9 +9,14 @@ import Login from '../Login';  // Make sure Login is imported
 function LoginModal({ isOpen, onClose }) {
   const [isLoginOpen, setIsLoginOpen] = useState(false);  // State to control the Login modal
 
+  // useEffect(() => {
+  //   console.log(`isLoginOpen: ${isLoginOpen}`); // Monitora mudanças no isLoginOpen
+  // }, [isLoginOpen]);
+
+
   // Function to handle the "Continue with Email" action
   const handleEmailClick = () => {
-    setIsLoginOpen(true);  // Open the Login modal
+    setIsLoginOpen(true); // Open the Login modal
     onClose();  // Close the current LoginModal
   };
 
@@ -38,8 +43,8 @@ function LoginModal({ isOpen, onClose }) {
             </div>
             <p className="terms-modal">By proceeding, you agree to our Terms of Use and confirm you have read our Privacy and Cookie Statement</p>
             <button onClick={onClose} className="login-modal-close-button">
-                <img src={closeIcon} alt="Close" />
-               </button>
+              <img src={closeIcon} alt="Close" />
+            </button>
           </div>
         </div>
       )}

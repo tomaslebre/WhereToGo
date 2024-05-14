@@ -38,15 +38,16 @@ function BodyHome() {
 
   return (
     <>
-      <motion.div className="feature-card" ref={cardRef} variants={cardVariants} initial="hidden" animate={cardInView ? "visible" : "hidden"}>
-        <motion.div className="text-container" ref={textRef} variants={textContainerVariants} initial="hidden" animate={textInView ? "visible" : "hidden"}>
+      <motion.div className="feature-card" ref={cardRef} variants={cardVariants}>
+        {/* <motion.div className="text-container" ref={textRef} variants={textContainerVariants} initial="hidden" animate={textInView ? "visible" : "hidden"}> */}
+        <motion.div className="text-container" ref={textRef} variants={textContainerVariants}>
           <h2 className='logo-txt'>Where To Go?</h2>
           <p className="slogan-p">Cria o teu roteiro em minutos!</p>
           <button className="new-roteiro">
             <span style={{ position: 'relative', zIndex: 1 }}>Novo Roteiro</span>
           </button>
         </motion.div> 
-        <motion.img src={bridgeImage} alt="Ponte" ref={imageRef} className="feature-image" variants={imageVariants} initial="hidden" animate={imageInView ? "visible" : "hidden"} />
+        <motion.img src={bridgeImage} alt="Ponte" ref={imageRef} className="feature-image" variants={imageVariants}/>
       </motion.div>
 
       <motion.div className="recommened-container" ref={textRef} variants={textContainerVariants} initial="hidden" animate={textInView ? "visible" : "hidden"}>

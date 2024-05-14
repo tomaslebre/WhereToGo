@@ -42,7 +42,7 @@ function EatComponents() {
       </motion.div>
 
       <motion.div className="about-us-container" initial="hidden" animate="visible">
-        {/* Sobre nós  */}
+       
       </motion.div>
 
       <div class="search-bar">
@@ -79,6 +79,7 @@ function EatComponents() {
         </select>
         <button onclick="filterResults()">Pesquisar</button>
       </div>
+       
 
       <CardsComponents>Português</CardsComponents>
       <CardsComponents>Italiano</CardsComponents>
@@ -88,6 +89,7 @@ function EatComponents() {
     </>
   );
 }
+
 
 
 

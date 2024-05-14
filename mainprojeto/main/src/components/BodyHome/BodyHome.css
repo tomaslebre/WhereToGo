@@ -41,7 +41,7 @@ body{
   }
  
   .new-roteiro {
-    padding: 12px 40px;
+    padding: 10px 40px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -101,7 +101,7 @@ body{
   }
 
   .text-container {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-right: 10px;
     order: -1; /* Coloca o texto acima da imagem */
     width: 100%; /* Faz o contêiner de texto ocupar toda a largura */
@@ -120,13 +120,13 @@ body{
     overflow: auto; /* Permite rolagem se o conteúdo exceder a altura máxima */
   }
   .new-roteiro {
-    padding: 8px 20px;
+    padding: 5px 20px;
     margin-left: 0;
     font-size: 12px; /* Ajusta o tamanho da fonte do botão */
   }
 
   .logo-txt {
-    font-size: 26px; /* Ajusta o tamanho da fonte do título */
+    font-size: 24px; /* Ajusta o tamanho da fonte do título */
     margin-bottom: 130px; 
     position: absolute;
 
@@ -166,9 +166,15 @@ body{
   }
 }
 
-@media (max-width: 1368px) {
+@media (min-width: 769px) and (max-width: 1200px){
   .feature-card {
     max-width: 700px;
   }
-  
+  .logo-txt {
+    font-size: 35px; /* Ajusta o tamanho da fonte do título  */
+  } 
+  .new-roteiro {
+    padding: 8px 20px;
+    font-size: 15px;
+  }
 }
