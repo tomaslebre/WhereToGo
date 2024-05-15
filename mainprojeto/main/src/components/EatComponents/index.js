@@ -42,7 +42,7 @@ function EatComponents() {
       </motion.div>
 
       <motion.div className="about-us-container" initial="hidden" animate="visible">
-       
+
       </motion.div>
 
       <div class="search-bar">
@@ -55,31 +55,31 @@ function EatComponents() {
           <option value="marisqueira">Marisqueira</option>
         </select>
         <select id="region" onchange="filterResults()">
-        <option value="">Região</option>
-        <option value="aveiro">Aveiro</option>
-        <option value="beja">Beja</option>
-        <option value="braga">Braga</option>
-        <option value="braganca">Bragança</option>
-        <option value="castelo_branco">Castelo Branco</option>
-        <option value="coimbra">Coimbra</option>
-        <option value="evora">Évora</option>
-        <option value="faro">Faro</option>
-        <option value="guarda">Guarda</option>
-        <option value="leiria">Leiria</option>
-        <option value="lisboa">Lisboa</option>
-        <option value="portalegre">Portalegre</option>
-        <option value="porto">Porto</option>
-        <option value="santarem">Santarém</option>
-        <option value="setubal">Setúbal</option>
-        <option value="viana_do_castelo">Viana do Castelo</option>
-        <option value="vila_real">Vila Real</option>
-        <option value="viseu">Viseu</option>
-        <option value="madeira">Madeira</option>
-        <option value="acores">Açores</option>
+          <option value="">Região</option>
+          <option value="aveiro">Aveiro</option>
+          <option value="beja">Beja</option>
+          <option value="braga">Braga</option>
+          <option value="braganca">Bragança</option>
+          <option value="castelo_branco">Castelo Branco</option>
+          <option value="coimbra">Coimbra</option>
+          <option value="evora">Évora</option>
+          <option value="faro">Faro</option>
+          <option value="guarda">Guarda</option>
+          <option value="leiria">Leiria</option>
+          <option value="lisboa">Lisboa</option>
+          <option value="portalegre">Portalegre</option>
+          <option value="porto">Porto</option>
+          <option value="santarem">Santarém</option>
+          <option value="setubal">Setúbal</option>
+          <option value="viana_do_castelo">Viana do Castelo</option>
+          <option value="vila_real">Vila Real</option>
+          <option value="viseu">Viseu</option>
+          <option value="madeira">Madeira</option>
+          <option value="acores">Açores</option>
         </select>
         <button onclick="filterResults()">Pesquisar</button>
       </div>
-       
+
 
       <CardsComponents>Português</CardsComponents>
       <CardsComponents>Italiano</CardsComponents>

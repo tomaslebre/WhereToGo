@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './LoginModal.css';
 import emailLogo from '../../imgs/logos/mail.png';
 import googleLogo from '../../imgs/logos/google.png';
 import ponteLogo from '../../imgs/logos/logoponte.png';
 import closeIcon from '../../imgs/logos/close.png';
-import Login from '../Login';  // Make sure Login is imported
+import Login from '../Login';
+import Register from '../Register';  // Importe o Register
 
 function LoginModal({ isOpen, onClose }) {
-  const [isLoginOpen, setIsLoginOpen] = useState(false);  // State to control the Login modal
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
 
-  // useEffect(() => {
-  //   console.log(`isLoginOpen: ${isLoginOpen}`); // Monitora mudanças no isLoginOpen
-  // }, [isLoginOpen]);
-
-
-  // Function to handle the "Continue with Email" action
   const handleEmailClick = () => {
-    setIsLoginOpen(true); // Open the Login modal
-    onClose();  // Close the current LoginModal
+    setIsLoginOpen(true);
+    onClose();
   };
 
-  if (!isOpen && !isLoginOpen) return null;
+  const handleRegisterOpen = () => {
+    setIsRegisterOpen(true);
+    setIsLoginOpen(false); // Fecha o modal de login ao abrir o de registro
+  };
+
+  if (!isOpen && !isLoginOpen && !isRegisterOpen) return null;
 
   return (
     <>
@@ -48,7 +49,8 @@ function LoginModal({ isOpen, onClose }) {
           </div>
         </div>
       )}
-      {isLoginOpen && <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />}
+      {isLoginOpen && <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} onRegisterOpen={handleRegisterOpen} />}
+      {isRegisterOpen && <Register isOpen={isRegisterOpen} onClose={() => setIsRegisterOpen(false)} />}
     </>
   );
 }

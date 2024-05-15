@@ -25,12 +25,12 @@ function Header() {
     }
   };
 
- 
+
 
   return (
     <header className="header">
       <div className="branding">
-        <Link to='/'><img src={logoImage} className='logoImg' alt="Logo"/></Link>
+        <Link to='/'><img src={logoImage} className='logoImg' alt="Logo" /></Link>
         <Link to='/'><div className="logo">WhereToGo</div></Link>
       </div>
       <div className="hamburger-menu" onClick={toggleMenu}>

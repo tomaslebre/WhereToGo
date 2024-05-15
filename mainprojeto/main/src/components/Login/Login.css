@@ -1,130 +1,140 @@
 .login-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1050; /* Make sure this is above other page content */
-  }
-  
-  .login-container {
-    width: 100%;
-    max-width: 600px; /* Adjust width as needed */
-    padding: 50px;
-    text-align: left;
-    background-color: var(--bege); /* Light background color */
-    color: var(--blue);
-    border-radius: 10px;
-    position: relative; /* Allows for close button positioning if needed */
-    z-index: 1051; /* Above the backdrop */
-  }
-  
-  
-  .login-header {
-    margin-bottom: 30px;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  /* Make sure this is above other page content */
+}
 
-  .login-title{
-    color: var(--blue);
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-align: left;
-  }
-  
-  .login-form label {
-    text-align: left;
-    margin-bottom: 5px;
-    margin-left : 20px;
-    font-size: 14px;
-  }
-  
-  .login-form input {
-    display: flex;
-    align-items: center; /* Centers the items vertically */
-    justify-content: flex-start; /* Aligns items to the left */
-    padding-left: 20px; /* Provides padding on the left */
-    text-align: left; /* Aligns text to the left */
-    width: 100%;
-    padding: 10px 20px;
-    border-radius: 30px;
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    font-size: 14px;
-    position: relative;
-  }
-    
-  .login-form button {
-    padding: 10px;
-    color: white;
-    background-color: var(--blue); 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .login-form button:hover {
-    background-color: var(--blue);
-  }
-
-  .login-nopass a {
-    display: block; /* Ocupa a linha inteira, útil se quiser que seja clicável em toda a extensão */
-    color: var(--blue);
-    text-decoration: underline; /* Aplica o sublinhado diretamente ao link */
-    font-size: 14px;
-    margin-top: 20px; /* Espaçamento entre o link e o conteúdo acima, se necessário */
-  }
-  
-
-  .login-register {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .login-register a, .login-register p {
-    color: var(--blue);
-    text-decoration: none;
-    font-size: 14px;
-  }
-  
-  .login-register a {
-    text-decoration: underline;
-  }
-  
-  .account-query {
-    display: inline; /* ou pode tentar flex aqui se inline não funcionar como esperado */
-  }
-  
-  
-  .login-terms {
-    font-size: 12px;
-    color: #666;
-    margin-top: 20px;
-    text-align: center;
-  }
+.login-container {
+  width: 100%;
+  max-width: 600px;
+  /* Adjust width as needed */
+  padding: 50px;
+  text-align: left;
+  background-color: var(--bege);
+  /* Light background color */
+  color: var(--blue);
+  border-radius: 10px;
+  position: relative;
+  /* Allows for close button positioning if needed */
+  z-index: 1051;
+  /* Above the backdrop */
+}
 
 
-  .login-close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: none;
-    cursor: pointer;
-  }
-  
-  
-  
-  
+.login-header {
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-title {
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-form label {
+  text-align: left;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+.login-form input {
+  display: flex;
+  align-items: center;
+  /* Centers the items vertically */
+  justify-content: flex-start;
+  /* Aligns items to the left */
+  padding-left: 20px;
+  /* Provides padding on the left */
+  text-align: left;
+  /* Aligns text to the left */
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+}
+
+.login-form button {
+  padding: 10px;
+  color: white;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: var(--blue);
+}
+
+.login-nopass a {
+  display: block;
+  /* Ocupa a linha inteira, útil se quiser que seja clicável em toda a extensão */
+  color: var(--blue);
+  text-decoration: underline;
+  /* Aplica o sublinhado diretamente ao link */
+  font-size: 14px;
+  margin-top: 20px;
+  /* Espaçamento entre o link e o conteúdo acima, se necessário */
+}
+
+
+.login-register {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.login-register a,
+.login-register p {
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-register a {
+  text-decoration: underline;
+}
+
+.account-query {
+  display: inline;
+  /* ou pode tentar flex aqui se inline não funcionar como esperado */
+}
+
+
+.login-terms {
+  font-size: 12px;
+  color: #666;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.login-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
