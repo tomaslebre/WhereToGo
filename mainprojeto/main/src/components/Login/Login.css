@@ -72,13 +72,20 @@
   font-size: 14px;
   position: relative;
 }
+.txt{
+  margin-bottom: 15px;
+}
 
-.login-form button {
+label{
+  font-size: 14px;
+  font-weight: bold;
+}
+.but-login{
   padding: 10px;
   color: white;
   background-color: var(--blue);
   border: none;
-  border-radius: 5px;
+  border-radius: 45px;
   cursor: pointer;
 }
 
@@ -97,30 +104,48 @@
   /* Espaçamento entre o link e o conteúdo acima, se necessário */
 }
 
-
 .login-register {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
-}
-
-.login-register a,
-.login-register p {
-  color: var(--blue);
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.login-register a {
-  text-decoration: underline;
+  
 }
 
 .account-query {
-  display: inline;
-  /* ou pode tentar flex aqui se inline não funcionar como esperado */
+  margin-right: 10px;
+  font-size: 14px;
+  line-height: 1.5; /* Garante a mesma altura da linha */
+  display: flex;
+  align-items: center;
 }
 
+.register-click {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--blue);
+  margin-bottom:16px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.container-password{
+  margin-bottom: 15px;
+}
+
+
+
+
+.login-register a{
+  color: var(--blue);
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-register p {
+  font-size: 14px;
+  color: var(--blue);
+}
 
 .login-terms {
   font-size: 12px;

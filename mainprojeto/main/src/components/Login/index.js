@@ -18,24 +18,29 @@ function Login({ isOpen, onClose, onRegisterOpen }) {
                 </div>
 
                 <form className="login-form">
-                    <label htmlFor="email">Endereço de email</label>
-                    <input type="email" id="email" name="email" placeholder="Email" required />
+                    <div className='container-email'>
+                        <label htmlFor="email">Endereço de email</label>
+                        <input className="txt" type="email" id="email" name="email" placeholder="Email" required />
+                    </div>
+                    <div className='container-password'>
+                        <label htmlFor="password">Palavra-passe</label>
+                        <input type="password" id="password" name="password" placeholder="Palavra-passe" required />
+                    </div>
 
-                    <label htmlFor="password">Palavra-passe</label>
-                    <input type="password" id="password" name="password" placeholder="Palavra-passe" required />
+
                     <div className="login-nopass">
                         <a href="#">Esqueceu-se da Palavra-passe?</a>
                     </div>
 
-                    <button type="submit">Iniciar Sessão</button>
+                    <div className="login-register">
+                        <p className="account-query">Não tem conta?</p>
+                        <a className="register-click" onClick={handleChangeToRegisterClick}>Registe-se</a>
+                    </div>
+
+                    <button className="but-login" type="submit">Iniciar Sessão</button>
                 </form>
 
-                <div className="login-register">
-                    <p className="account-query">Não tem conta?</p>
-                    <button onClick={handleChangeToRegisterClick}>
-                        Registe-se
-                    </button>
-                </div>
+
 
                 <button onClick={onClose} className="login-close-button">
                     <img src={closeIcon} alt="Close" />
