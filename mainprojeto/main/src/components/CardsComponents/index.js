@@ -18,7 +18,7 @@ function CardsComponents({ children }) {
     exit: { opacity: 0, transition: { duration: 0.5 } }
   };
 
-  const cardVariants = {
+  const card_Variants = {
     hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
@@ -33,7 +33,7 @@ function CardsComponents({ children }) {
       {children && (
         <div className="row justify-content-left">
           <div className="col-12 col-md-2">
-            <motion.p className="tag-container text-center mx-auto" style={{ maxWidth: "300px" }} variants={cardVariants}>
+            <motion.p className="tag-container text-center mx-auto" style={{ maxWidth: "300px" }} variants={card_Variants}>
               {children}
             </motion.p>
           </div>
@@ -41,17 +41,17 @@ function CardsComponents({ children }) {
       )}
       <div className="row justify-content-center">
         <div className="col-6 col-sm-6 col-md-4">
-          <motion.div className='cards-container' variants={cardVariants}>
+          <motion.div className='cards-container' variants={card_Variants}>
             {/* Content of the first card */}
           </motion.div>
         </div>
         <div className="col-6 col-sm-6 col-md-4">
-          <motion.div className='cards-container' variants={cardVariants}>
+          <motion.div className='cards-container' variants={card_Variants}>
             {/* Content of the second card */}
           </motion.div>
         </div>
         <div className="d-none d-md-block col-md-4">
-          <motion.div className='cards-container' variants={cardVariants}>
+          <motion.div className='cards-container' variants={card_Variants}>
             {/* Content of the third card, hidden on xs and sm screens */}
           </motion.div>
         </div>

@@ -17,15 +17,11 @@
   max-width: 600px;
   /* Adjust width as needed */
   padding: 50px;
-  text-align: left;
   background-color: var(--bege);
   /* Light background color */
   color: var(--blue);
   border-radius: 10px;
   position: relative;
-  /* Allows for close button positioning if needed */
-  z-index: 1051;
-  /* Above the backdrop */
 }
 
 
@@ -51,46 +47,54 @@
   margin-bottom: 5px;
   margin-left: 20px;
   font-size: 14px;
+  align-items: center;
 }
+
 
 .login-form input {
   display: flex;
-  align-items: center;
   /* Centers the items vertically */
   justify-content: flex-start;
-  /* Aligns items to the left */
-  padding-left: 20px;
   /* Provides padding on the left */
   text-align: left;
   /* Aligns text to the left */
   width: 100%;
   padding: 10px 20px;
   border-radius: 30px;
-  background-color: white;
-  color: black;
   cursor: pointer;
   font-size: 14px;
-  position: relative;
+  height: 55px;
 }
 .txt{
   margin-bottom: 15px;
 }
 
-label{
-  font-size: 14px;
-  font-weight: bold;
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
 }
+
+
+
 .but-login{
   padding: 10px;
+  width: 40%;
+  align-items: center;
   color: white;
-  background-color: var(--blue);
   border: none;
+  background-color: var(--blue);
   border-radius: 45px;
-  cursor: pointer;
 }
 
 .login-form button:hover {
   background-color: var(--blue);
+}
+
+.login-links{
+  margin-top: -15px;
+  margin-left: 20px;
 }
 
 .login-nopass a {
@@ -132,6 +136,22 @@ label{
   margin-bottom: 15px;
 }
 
+/* .error-message{
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+
+}
+
+.wrong {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+} */
 
 
 

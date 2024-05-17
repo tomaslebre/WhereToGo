@@ -12,7 +12,8 @@
 }
 
 .register-container {
-  background-color: #fff;
+  background-color: var(--bege);
+  color: var(--blue);
   padding: 50px;
   width: 100%;
   max-width: 600px;
@@ -66,4 +67,22 @@
   color: #0047ab;
   text-decoration: none;
   font-size: 14px;
+}
+
+
+.error-message{
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+
+}
+
+.wrong {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

@@ -8,11 +8,11 @@ const CustomCard = () => {
                 <div className="card-body d-flex justify-content-between p-3"> {/* Adiciona mais padding interno ao corpo do cartão */}
                     <div className="text-section">
                         <h5 className="card-title">Está com dúvidas de onde ir?</h5>
-                        <p className="card-text">
-                            Use a nossa função de criar roteiro para descobrir novos lugares incríveis!
-                        </p>
+                        <div className='container-roteiro'>
+                            <p className="card-text">Use a nossa função de criar roteiro para descobrir novos lugares incríveis!</p>
+                        </div>
                     </div>
-                    <button className="btn btn-primary align-self-center">Novo Roteiro</button>
+
                 </div>
             </div>
         </div>

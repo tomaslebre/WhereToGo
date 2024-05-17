@@ -5,11 +5,14 @@ import googleLogo from '../../imgs/logos/google.png';
 import ponteLogo from '../../imgs/logos/logoponte.png';
 import closeIcon from '../../imgs/logos/close.png';
 import Login from '../Login';
-import Register from '../Register';  // Importe o Register
+import Register from '../Register'; 
+import ResetPassword from '../ResetPassword';
+import ResetEmail from '../ResetEmail';
 
 function LoginModal({ isOpen, onClose }) {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+  const [isResetEmailOpen, setIsResetEmailOpen] = useState(false);
 
   const handleEmailClick = () => {
     setIsLoginOpen(true);
@@ -18,10 +21,15 @@ function LoginModal({ isOpen, onClose }) {
 
   const handleRegisterOpen = () => {
     setIsRegisterOpen(true);
-    setIsLoginOpen(false); // Fecha o modal de login ao abrir o de registro
+    setIsLoginOpen(false); 
   };
 
-  if (!isOpen && !isLoginOpen && !isRegisterOpen) return null;
+  const handleResetEmail = () => {
+    setIsLoginOpen(false);
+    setIsResetEmailOpen(true); 
+  };
+
+  if (!isOpen && !isLoginOpen && !isRegisterOpen && !isResetEmailOpen) return null;
 
   return (
     <>
@@ -49,7 +57,8 @@ function LoginModal({ isOpen, onClose }) {
           </div>
         </div>
       )}
-      {isLoginOpen && <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} onRegisterOpen={handleRegisterOpen} />}
+      {isLoginOpen && <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} onRegisterOpen={handleRegisterOpen} onResetEmailOpen={handleResetEmail} />}
+      {isResetEmailOpen && <ResetEmail isOpen={isResetEmailOpen} onClose={() => setIsResetEmailOpen(false)} />}
       {isRegisterOpen && <Register isOpen={isRegisterOpen} onClose={() => setIsRegisterOpen(false)} />}
     </>
   );
