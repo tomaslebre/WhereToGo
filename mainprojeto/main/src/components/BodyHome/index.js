@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import "./BodyHome.css";
 import bridgeImage from '../../imgs/imagens/ponte_azul.png';
 import Cards from '../CardsComponents';
-import useInView from '../../hooks/useInView';  // Ajuste este caminho conforme necessário
+import useInView from '../../hooks/useInView';
 
 function BodyHome() {
   const [cardRef, cardInView] = useInView({ threshold: 0.5 });
@@ -29,7 +29,7 @@ function BodyHome() {
     }
   };
 
-  const recommendedVariants= {
+  const recommendedVariants = {
     hidden: { x: '-30vw', opacity: 0 },
     visible: {
       x: 0,

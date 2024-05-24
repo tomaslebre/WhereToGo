@@ -10,7 +10,9 @@ import Roteiro from './pages/Roteiro';
 import Contactos from './pages/Contactos';
 import LoginModal from "./components/LoginModal";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Admin from "./components/AdminDashboard";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 
 
 const Home = () => {
@@ -37,8 +39,10 @@ function App() {
             <Route path="/roteiro" element={<Roteiro />} />
             <Route path="/contactos" element={<Contactos />} />
             <Route path="/login" element={<LoginModal />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </div>
+        
         <Footer />
       </Router>
     </div>

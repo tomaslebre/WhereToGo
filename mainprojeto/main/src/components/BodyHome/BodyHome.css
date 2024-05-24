@@ -94,68 +94,46 @@ body {
 }
 
 @media (max-width: 768px) {
-  .navigation, .branding {
-    padding: 15px;
+  .feature-card {
+    flex-direction: column;
+    padding: 20px;
+    width: 80%;
   }
 
   .text-container {
-    margin-top: 30px;
-    margin-right: 10px;
-    order: -1;
-    width: 100%;
-    max-width: none;
-    padding: 0 20px;
+    margin-bottom: 20px;
   }
 
   .feature-image {
-    object-fit: cover;
-  }
-
-  .feature-card {
-    width: 80%;
-    padding: 20px;
-    max-height: 250px;
-    overflow: auto;
-  }
-
-  .new-roteiro {
-    padding: 5px 20px;
-    margin-left: 0;
-    font-size: 12px;
+    width: 100%;
   }
 
   .logo-txt {
     font-size: 24px;
-    margin-bottom: 130px;
-    position: absolute;
-    text-align: center;
   }
 
   .slogan-p {
-    text-align: center;
     font-size: 14px;
-    margin-bottom: 9%;
   }
 
-  .logo {
-    font-size: 20px;
+  .new-roteiro {
+    padding: 8px 20px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .feature-card {
-    margin: 30px auto;
     padding: 10px;
+    width: 90%;
   }
 
   .logo-txt {
-    margin-bottom: 25%;
     font-size: 20px;
   }
 
   .slogan-p {
-    font-size: 13px;
-    margin-bottom: 1em;
+    font-size: 12px;
   }
 
   .new-roteiro {
@@ -164,7 +142,7 @@ body {
   }
 
   .feature-image {
-    width: 50%;
+    width: 70%;
   }
 }
 
